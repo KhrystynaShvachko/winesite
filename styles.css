@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@500&family=Spectral:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --footer-bg-color: #2a2824;
+  --footer-logo-width: 85px;
+  --footer-logo-height: 68.7px;
+  --footer-separator: #ffffff;
+  --footer-description-color: #ffffffb0;
+  --footer-menu-link-color: #ffffffb0;
+  --footer-menu-link-hover-color: #ffffff;
+  --footer-contact-link-color: #ffffff;
+  --footer-contact-link-hover-color: #ffffff;
+  --footer-contact-item-color: #bc6e44;
+  --footer-text-color: #ffffffb0;
+  --color-paragraph-text: #868076;
+  --color-additional-text: #544e4d;
+  --heading-section-text-color: #bc6e44;
+  --paragraph-section-text-color: #2a2824;
+  --paragraph-content-text-color: #837d71;
+  --link-text-color: #544e4c;
+  --background-color-signup: #bc6e44;
+  --text-color-signup: #fff;
+  --text-color-content-signup: #eddcd2;
+  --section-text-font-family: "Spectral", serif;
+  --paragraph-text-font-family: "Cormorant Infant", serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none; /* Прибираємо маркери зі списку */
+  padding: 0; /* Прибираємо відступи списку */
+  margin: 0; /* Прибираємо відступи списку */
+}
+
+/* Визначає гнучкий елемент, що має рівний розподіл простору */
+.column {
+  flex: 1;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px;
+}
+
+.column:first-child {
+  margin-right: 20px;
+}
+
+/* Шрифт для заголовків в моєму випадку Guided Tours */
+.h-text-content {
+  font-family: "Cormorant Infant", serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43.2px;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CSS for About Us Section */
+@media (min-width: 1200px) {
+  .about-us {
+    padding-bottom: 140px;
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: */
+  }
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-us__content {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-us__title {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.about-us__subtitle {
+  text-align: center;
+  font-family: "Cormorant Infant", serif;
+  font-size: 3.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.about-us__description {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.about-us__image {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.about-us__image-item {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-us__text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Дві колонки */
+  gap: 40px; /* Відстань між колонками */
+  align-items: start; /* Вирівнювання елементів зверху */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.about-us__text {
+  margin-bottom: 20px;
+  text-align: left; /* Вирівнюємо текст по лівому краю */
+}
+
+@media (max-width: 768px) {
+  .about-us__text-container {
+    grid-template-columns: 1fr; /* Одна колонка */
+  }
+}
