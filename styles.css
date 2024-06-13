@@ -215,3 +215,110 @@ ul {
     width: 100%; /* Підкреслення на всю довжину */
   }
 }
+.winemaking-process {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.carousel {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.winemaking-process__title {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.winemaking-process__subtitle {
+  text-align: center;
+  font-family: "Cormorant Infant", serif;
+  font-size: 3.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.winemaking-process__description {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.winemaking-process__carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.winemaking-process__slide {
+  min-width: 33.333%;
+  box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
+  padding: 0 10px;
+}
+
+.winemaking-process__image {
+  width: 100%;
+  height: 250px; /* Fixed height for images */
+  object-fit: cover; /* Preserve image aspect ratio and fill container */
+}
+
+.winemaking-process__info {
+  text-align: left;
+  margin-top: 30px;
+  position: relative; /* Ensure button can be positioned absolutely */
+}
+
+.winemaking-process__step {
+  font-size: 26px;
+  font-family: "Cormorant Infant", serif;
+}
+
+.winemaking-process__button {
+  background: none;
+  border: none;
+  color: #bc6e44;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute; /* Position button absolutely */
+  top: 0; /* Align to the top of the parent */
+  right: 0; /* Align to the right of the parent */
+}
+
+.winemaking-process__details {
+  display: none;
+  margin-top: 30px;
+  text-align: left; /* Align text to the left */
+}
+
+.winemaking-process__detail {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.winemaking-process__carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #bc6e44;
+  z-index: 10;
+}
+
+.winemaking-process__carousel-control--left {
+  left: 10px;
+}
+
+.winemaking-process__carousel-control--right {
+  right: 10px;
+}
