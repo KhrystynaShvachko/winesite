@@ -37,15 +37,19 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: var(--section-text-font-family);
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -54,7 +58,6 @@ ul {
   margin: 0; /* Прибираємо відступи списку */
 }
 
-/* Визначає гнучкий елемент, що має рівний розподіл простору */
 .column {
   flex: 1;
   margin-left: 0;
@@ -66,7 +69,6 @@ ul {
   margin-right: 20px;
 }
 
-/* Шрифт для заголовків в моєму випадку Guided Tours */
 .h-text-content {
   font-family: "Cormorant Infant", serif;
   font-size: 36px;
@@ -79,12 +81,10 @@ ul {
 /* CSS for About Us Section */
 @media (min-width: 1200px) {
   .about-us {
-    padding-bottom: 140px;
-    padding-top: 150px;
+    padding: 100px 0 1px; /* Верхній та нижній відступи */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* background-color: */
   }
 }
 
@@ -105,6 +105,7 @@ ul {
   font-weight: 700;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .about-us__subtitle {
@@ -113,24 +114,29 @@ ul {
   font-size: 3.3rem;
   font-weight: 500;
   line-height: 1.5;
+  margin-bottom: 16px;
 }
 
 .about-us__description {
   text-align: center;
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .about-us__image {
-  text-align: center;
-  margin: 40px 0;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.about-us__image-item {
-  max-width: 100%;
+.about-us__image img {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  object-fit: cover; /* Заповнює контейнер зображенням, зберігаючи пропорції */
+  object-position: center top; /* Центрує зображення горизонтально і обрізає зверху */
 }
 
 .about-us__text-container {
@@ -138,7 +144,7 @@ ul {
   grid-template-columns: 1fr 1fr; /* Дві колонки */
   gap: 40px; /* Відстань між колонками */
   align-items: start; /* Вирівнювання елементів зверху */
-  font-size: 16px;
+  font-size: 16.5px;
   line-height: 1.6;
   color: #4a4a4a;
 }
@@ -151,5 +157,61 @@ ul {
 @media (max-width: 768px) {
   .about-us__text-container {
     grid-template-columns: 1fr; /* Одна колонка */
+  }
+}
+
+.timeline {
+  max-width: 1200px;
+  margin: 0 auto; /* Верхній відступ та відступ зверху */
+  padding: 5px 20px 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+  gap: 20px;
+  justify-items: center; /* Центрування елементів у колонках */
+}
+
+.timeline__item {
+  text-align: left; /* Вирівнюємо текст по лівому краю */
+  padding: 10px;
+}
+
+.timeline__date {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: "Cormorant Infant", serif;
+  margin-bottom: 30px; /* Збільшуємо відступ між датою і текстом опису */
+  position: relative;
+}
+
+.timeline__date::before {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Піднімаємо підкреслення на відстань, щоб воно було між текстом дати і описом */
+  left: 0;
+  width: 40px;
+  height: 2.5px;
+  background-color: #000;
+  margin-top: 10px; /* Відступ зверху підкреслення */
+}
+
+.timeline__description {
+  margin-top: 30px; /* Відступ зверху перед описом */
+  font-size: 16.5px;
+  color: #555;
+}
+
+/* Забезпечення адаптивності для менших екранів */
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr; /* Одна колонка */
+    justify-items: center;
+  }
+
+  .timeline__date {
+    text-align: left; /* Вирівнювання по лівому краю */
+  }
+
+  .timeline__date::before {
+    width: 100%; /* Підкреслення на всю довжину */
   }
 }
